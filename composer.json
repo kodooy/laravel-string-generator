@@ -1,0 +1,58 @@
+{
+    "name": "kodooy/laravel-string-generator",
+    "description": "A Laravel package for generating random strings and collections of unique strings",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "string",
+        "generator",
+        "random",
+        "unique"
+    ],
+    "authors": [
+        {
+            "name": "Joe Doe",
+            "email": "joe@doe.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "pestphp/pest": "^3.7",
+        "pestphp/pest-plugin-laravel": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kodooy\\StringGenerator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kodooy\\StringGenerator\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kodooy\\StringGenerator\\StringGeneratorServiceProvider"
+            ],
+            "aliases": {
+                "StringGenerator": "Kodooy\\StringGenerator\\Facades\\StringGenerator"
+            }
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
